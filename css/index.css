@@ -15,7 +15,6 @@
 }
 
 .Header__logo {
-  min-width: 250px;
   height: 100%;
   margin-left: 5%;
   display: flex;
@@ -84,14 +83,17 @@
   }
 
   .Navbar__menu {
-    transform: translateY(-200%);
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top:-100%;
     flex-direction: column;
-    transition: transform ease 0.2s;
+    transition: all ease 0.2s;
     z-index: -1;
   }
 
   .Navbar__menu.show {
-    transform: translateY(80px);
+    top: 80px;
   }
 
   .Navbar__menu--item {
